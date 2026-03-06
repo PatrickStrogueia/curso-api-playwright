@@ -21,7 +21,7 @@ def test_crud_usuarios():
                   'administrador': 'true'}
         )
 
-        print(response_create.body())
+        print(response_create.json())
         assert response_create.status == 201
         assert response_create.json()['message'] == 'Cadastro realizado com sucesso'
         user_id = response_create.json()['_id']
@@ -47,6 +47,6 @@ def test_crud_usuarios():
         assert response_read.json()['email'] == email
 
         response_delete = request_context.delete(f'{BASE_URL}/{user_id}')
-        print(response_delete.body())
+        print(response_delete.json())
         assert response_delete.status == 200
         assert response_delete.json()['message'] == 'Registro excluído com sucesso'
