@@ -7,6 +7,7 @@ incluindo o contexto de API e autenticação com token.
 
 import pytest
 from playwright.sync_api import sync_playwright
+from page_objects.usuarios import Usuarios
 
 # Credenciais de teste utilizadas para autenticação na API
 EMAIL_TESTE = 'teste_patrick@email.com'
@@ -94,3 +95,7 @@ def token(api_context):
     print(f'Login realizado com sucesso: {token_str}')
     
     return token_str
+
+@pytest.fixture
+def usuario_servico(api_context):
+    return Usuarios(api_context)
