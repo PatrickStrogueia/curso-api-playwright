@@ -1,0 +1,5 @@
+pip install pytest-html
+pytest --html=report.html --self-contained-html --capture=tee-sys
+pip install allure-pytest
+pytest --alluredir=allure-results
+allure serve allure-results/
