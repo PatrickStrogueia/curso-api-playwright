@@ -1,0 +1,23 @@
+[
+    {
+        "nome": "administrador",
+        "email": "teste@tessseeeete.com",
+        "password": "1234",
+        "administrador": "true",
+        "esperado": 201
+    },
+    {
+        "nome": "",
+        "email": "teste@teste.com",
+        "password": "errado",
+        "administrador": "false",
+        "esperado": 400
+    },
+    {
+        "nome": "user",
+        "email": "",
+        "password": "1234",
+        "administrador": "false",
+        "esperado": 400
+    }
+]
