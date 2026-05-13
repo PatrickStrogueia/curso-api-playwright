@@ -20,3 +20,4 @@ Faker
 jsonschema
 pytest-html
 allure-pytest
+pytest-xdist

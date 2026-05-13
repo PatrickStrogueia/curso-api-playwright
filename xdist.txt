@@ -1,0 +1,6 @@
+pip install pytest-xdist
+
+pytest
+pytest -n 2
+pytest -n 4
+pytest -n auto
